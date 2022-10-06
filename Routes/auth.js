@@ -46,7 +46,7 @@ router.post(
         var rsp2 = await new_registration_mail(
           user.StudentName,
           user.EmailId,
-          `${process.env.CHANGEPASSWORD_URL}/${tocken}`
+          `${process.env.FRONTEND_URL || "http://192.168.76.73:3000/register/" }/${tocken}`
         );
         //    if(rsp2.success == true)
         console.log(rsp2);
