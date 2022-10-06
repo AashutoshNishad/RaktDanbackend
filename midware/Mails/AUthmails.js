@@ -1,6 +1,6 @@
 // const sendmail = require("../SendMail")
 
-const sendmail = require("../SendMail");
+const sendmail = require("../sendMail");
 
 module.exports.new_registration_mail = (Name, Email , url) => {
   const fs = require("fs");
