@@ -1,3 +1,5 @@
 /node_modules
 ashu.js
 .env
+/build
+/volunteer.json
