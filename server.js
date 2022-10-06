@@ -18,9 +18,9 @@ app.use(express.json());
 app.use("/" , require("./Routes/request"));
 
 app.use("/user" , require("./Routes/auth"));
-// app.get("/" ,(req,res)=>{
-//     res.send("I am working")
-// })
+app.get("/" ,(req,res)=>{
+    res.send("I am working")
+})
 
 app.listen(process.env.PORT || 3000, function(){
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
