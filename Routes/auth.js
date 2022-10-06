@@ -46,16 +46,15 @@ router.post(
         var rsp2 = await new_registration_mail(
           user.StudentName,
           user.EmailId,
-          `http://localhost:3000/user/register/${tocken}`
+          `https://nss-raktdan.herokuapp.com/changepassword/${tocken}`
         );
         //    if(rsp2.success == true)
         console.log(rsp2);
         return res.send({ success: true });
-
         //    else
         //    return res.status.send({success: false , error: "Email Not send."})
       }
-      return res.status(400).send("User Not Found");
+      return res.status(400).send({success: false , error: "Email not found."});
     } catch (error) {
       console.error(error.message);
       res.status(500).json({ success, error: "Internal server error" });
