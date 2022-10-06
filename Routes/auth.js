@@ -46,11 +46,11 @@ router.post(
         var rsp2 = await new_registration_mail(
           user.StudentName,
           user.EmailId,
-          `${process.env.FRONTEND_URL || "http://192.168.76.73:3000/register/" }/${tocken}`
+          `${process.env.FRONTEND_URL || "http://localhost:3000" }/${tocken}`
         );
         //    if(rsp2.success == true)
         console.log(rsp2);
-        return res.send({ success: true });
+        return res.send({ success: rsp2.success });
         //    else
         //    return res.status.send({success: false , error: "Email Not send."})
       }
