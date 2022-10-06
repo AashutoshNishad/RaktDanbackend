@@ -46,7 +46,7 @@ router.post(
         var rsp2 = await new_registration_mail(
           user.StudentName,
           user.EmailId,
-          `https://nss-raktdan.herokuapp.com/changepassword/${tocken}`
+          `${process.env.CHANGEPASSWORD_URL}/${tocken}`
         );
         //    if(rsp2.success == true)
         console.log(rsp2);
